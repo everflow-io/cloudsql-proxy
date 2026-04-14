@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    groups:
+      actions-deps:
+        patterns:
+          - "*"
+    # only open PR if the dependency is at least 30 days old
+    cooldown:
+      default-days: 30
